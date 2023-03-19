@@ -1,5 +1,6 @@
 from os import system
 from menu import *
+from read import read_phonebook
 
 while True:
     print("1. Вывести все записи")

@@ -11,17 +11,20 @@ def print_all():
         print(line)
 
 def search():
+    print_all()
     search_term = input("Введите строку для поиска: ")
     results = search_phonebook(search_term)
     for line in results:
         print(line)
 
 def edit():
+    print_all()
     search_term = input("Введите строку для поиска: ")
     new_data = input("Введите новые данные: ")
     edit_phonebook(search_term, new_data)
 
 def delete():
+    print_all()
     search_term = input("Введите строку для поиска: ")
     delete_phonebook(search_term)
 
