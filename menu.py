@@ -21,17 +21,20 @@ def search():
     print('\n')
 
 def edit():
-    search_term = input("Введите строку для поиска: ")
-    new_data = input("Введите новые данные: ")
-    edit_phonebook(search_term, new_data)
+    contact_index = int(input("Введите номер записи, которую нужно отредактировать: ")) - 1
+    print(contact_index)
+    edit_phonebook(contact_index)
 
 def delete():
     search_term = input("Введите строку для поиска: ")
     delete_phonebook(search_term)
 
 def add():
-    new_data = input("Введите новые данные: ")
-    add_phonebook(new_data)
+    family = input('Введите фамилию: ')
+    name = input('Введите имя: ')
+    patronymic = input('Введите отчество: ')
+    phone = input('Введите номер телефона: ')
+    add_phonebook(family, name, patronymic, phone)
 
 def save():
     phonebook = read_phonebook()

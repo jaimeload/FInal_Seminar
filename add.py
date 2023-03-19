@@ -5,13 +5,12 @@ def fix_phone_number(phone_number):
         phone_number = '+' + phone_number
     return phone_number
 
-def add_phonebook(new_data):
+def add_phonebook(family, name, patronymic, phone):
     with open('Phonebook.txt', 'a', encoding='utf-8') as f:
         family_width = 15
         name_width = 15
         patronymic_width = 15
         phone_width = 12
-        family, name, patronymic, phone = new_data.split()
         phone = fix_phone_number(phone)
         new_line = family.ljust(family_width) + name.ljust(name_width) + patronymic.ljust(patronymic_width) + phone.ljust(phone_width)
         f.write('\n')
