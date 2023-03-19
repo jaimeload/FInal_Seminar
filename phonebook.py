@@ -4,9 +4,7 @@ from menu import *
 from read import read_phonebook
 
 current_directory = os.path.dirname(os.path.abspath('Phonebook.py'))
-# print(current_directory)
 phonebook_path = os.path.join(current_directory, 'Phonebook.txt')
-# print(phonebook_path)
 
 def create_empty_file(phonebook_path):
     with open(phonebook_path, 'w') as file:

@@ -26,8 +26,8 @@ def edit():
     edit_phonebook(contact_index)
 
 def delete():
-    search_term = input("Введите строку для поиска: ")
-    delete_phonebook(search_term)
+    line_del = int(input("Введите строку для удаления: "))
+    delete_phonebook(line_del)
 
 def add():
     family = input('Введите фамилию: ')

@@ -1,6 +1,6 @@
-from read import read_phonebook
-
 def save_phonebook(phonebook):
-    with open('Phonebook.txt', 'w', encoding='utf-8') as f:
-        for line in phonebook:
-            f.write(line)
+    with open('Phonebook.txt', 'r+', encoding='utf-8') as f:
+        content = f.read()
+        f.seek(0)
+        f.write(content)
+        f.truncate()       
