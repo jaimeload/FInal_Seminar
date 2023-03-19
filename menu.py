@@ -6,25 +6,26 @@ from add import add_phonebook
 from save import save_phonebook
 
 def print_all():
+    print('\n')
     phonebook = read_phonebook()
     for line in phonebook:
         print(line)
+    print('\n')
 
 def search():
-    print_all()
     search_term = input("Введите строку для поиска: ")
     results = search_phonebook(search_term)
+    print('\n')
     for line in results:
         print(line)
+    print('\n')
 
 def edit():
-    print_all()
     search_term = input("Введите строку для поиска: ")
     new_data = input("Введите новые данные: ")
     edit_phonebook(search_term, new_data)
 
 def delete():
-    print_all()
     search_term = input("Введите строку для поиска: ")
     delete_phonebook(search_term)
 
